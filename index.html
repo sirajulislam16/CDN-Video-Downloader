@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Video Link Opener</title>
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#111827">
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#111827;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.container{
+width:90%;
+max-width:700px;
+}
+
+textarea{
+width:100%;
+height:180px;
+padding:15px;
+border:none;
+border-radius:12px;
+font-size:14px;
+}
+
+button{
+margin-top:15px;
+width:100%;
+padding:15px;
+font-size:18px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+background:#3b82f6;
+color:white;
+}
+
+button:hover{
+opacity:.9;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Instagram CDN Video Opener</h2>
+
+<textarea id="url" placeholder="Paste CDN mp4 link here"></textarea>
+
+<button onclick="openVideo()">Open Video</button>
+</div>
+
+<script>
+function openVideo() {
+
+const url=document.getElementById("url").value.trim();
+
+if(!url){
+alert("Paste a URL");
+return;
+}
+
+window.open(url,"_blank");
+}
+</script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
